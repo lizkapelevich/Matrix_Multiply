@@ -1,8 +1,18 @@
+import sys
+import numpy as np
 
-A = input(np.array("Please enter the  4 digits in your first array in order 
-from left to right: ")
-B = input(np.array("Please enter the  4 digits in your second array in order                 │Author: lizkapelevich <elizakape@gmail.com>
-from left to right: ")
+A = np.zeros(9)
+for ii in range(9):
+    A[ii] = input("Enter number {}: ".format(ii))
+
+
+A[ii, jj] = input...
+
+
+print(A)
+
+
+sys.exit(0)
 
 A1_B1 = np.sum(A[0]*B[:,0])
 A2_B2 = np.sum(A[0]*B[:,1])
