@@ -1,6 +1,8 @@
 
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]]
+A = input(np.array("Please enter the  4 digits in your first array in order 
+from left to right: ")
+B = input(np.array("Please enter the  4 digits in your second array in order                 │Author: lizkapelevich <elizakape@gmail.com>
+from left to right: ")
 
 A1_B1 = np.sum(A[0]*B[:,0])
 A2_B2 = np.sum(A[0]*B[:,1])
