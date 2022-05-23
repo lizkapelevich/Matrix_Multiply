@@ -1,35 +1,34 @@
-import sys
+#!/usr/bin/env python
+# coding: utf-8
+
 import numpy as np
 
-#for ii in range(3):
-#    for jj in range(3):
+a_col_cnt = int(input("Input how many columns in Matrix A: "))
+a_row_cnt = int(input("Input how many rows in Matrix A: "))
+
+b_col_cnt = a_row_cnt
+b_row_cnt = a_col_cnt
+
+a = np.zeros((a_row_cnt, a_col_cnt))
+b = np.zeros((b_row_cnt, b_col_cnt))
+
+print("Enter value for item in Matrix A")
+for a_row_ii in range(0, a_row_cnt):
+    for a_col_ii in range(0, a_col_cnt):
+        a[a_row_ii, a_col_ii] = input("[" + str(a_row_ii) + ", " + str(a_col_ii) + "]: ")
         
+print("Enter value for item in Matrix B")
+for b_row_ii in range(0, b_row_cnt):
+    for b_col_ii in range(0, b_col_cnt):
+        b[b_row_ii, b_col_ii] = input("[" + str(b_row_ii) + ", " + str(b_col_ii) + "]: ")
 
+c = np.zeros((a_row_cnt, b_col_cnt))
 
-A = np.zeros(9)
-for ii in range(9):
-    A[ii] = input("Enter number {}: ".format(ii))
+for c_row_ii in range(0, a_row_cnt):
+    for c_col_ii in range(0, b_col_cnt):
+        for ii in range(0, a_col_cnt):
+#            print(str(c_row_ii) + " " + str(c_col_ii) + " = " + str(c_row_ii) + " " + str(ii) + " * " + str(ii) + " " + str(c_col_ii))
+            c[c_row_ii, c_col_ii] = c[c_row_ii, c_col_ii] + a[c_row_ii, ii] * b[ii, c_col_ii]
 
-
-A[ii, jj] = input...
-
-
-print(A)
-
-
-# Comment out this line to let the code progress from here
-sys.exit(0)
-
-
-A1_B1 = np.sum(A[0]*B[:,0])
-A2_B2 = np.sum(A[0]*B[:,1])
-A3_B3 = np.sum(A[1]*B[:,0])
-A4_B4 = np.sum(A[1]*B[:,1])
-
-print((A11*B11)+(A12*B21))
-print((A11*B12)+(A12*B22))
-print((A21*B11)+(A22*B21))
-print((A21*B12)+(A22*B22))
-
-# user input and make values printed out
-# write function that'll take input value and will do matrix calculation
+print("The calculation of your matrix is: ")
+print(c)
