@@ -20,7 +20,7 @@ def mat_mult(aa, bb):
             cc[ii, jj] = np.sum(aa[ii]*bb[:,jj])
     return cc
 
-def mat_mult2(A, B):
+def mat_mult2(a, b):
     """
     This function takes as input two matrices of same shape,
     and computes their product.
@@ -33,7 +33,7 @@ def mat_mult2(A, B):
     RETURNS:
     A numpy array
     """
-    a_row_cnt, b_col_cnt = np.shape(A)
+    a_row_cnt, b_col_cnt = np.shape(a)
     a_col_cnt = a_row_cnt
     c = np.zeros((a_row_cnt, b_col_cnt))
 
