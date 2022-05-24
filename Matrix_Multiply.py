@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import numpy as np
 
 a_col_cnt = int(input("Input how many columns in Matrix A: "))
@@ -28,7 +25,7 @@ for c_row_ii in range(0, a_row_cnt):
     for c_col_ii in range(0, b_col_cnt):
         for ii in range(0, a_col_cnt):
 #            print(str(c_row_ii) + " " + str(c_col_ii) + " = " + str(c_row_ii) + " " + str(ii) + " * " + str(ii) + " " + str(c_col_ii))
-            c[c_row_ii, c_col_ii] = c[c_row_ii, c_col_ii] + a[c_row_ii, ii] * b[ii, c_col_ii]
+            c[c_row_ii, c_col_ii] += a[c_row_ii, ii] * b[ii, c_col_ii]
 
 print("The calculation of your matrix is: ")
 print(c)
