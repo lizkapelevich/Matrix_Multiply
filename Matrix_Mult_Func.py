@@ -7,10 +7,12 @@ def mat_mult(aa, bb):
 
     INPUT:
     ------
-    aa : Numpy array
-    bb : Numpy array
-
+    aa : Numpy array of first matrix
+    bb : Numpy array of second matrix
+    cc : Numpy array of product of first and second matrix
+    
     RETURNS:
+    -------
     A numpy array
     """
     cc = np.zeros(np.shape(aa))
@@ -31,7 +33,8 @@ def mat_mult2(a, b):
     B : Numpy array
 
     RETURNS:
-    A numpy array
+    --------
+    The product of the two numpy arrays
     """
     a_row_cnt, b_col_cnt = np.shape(a)
     a_col_cnt = a_row_cnt
@@ -43,4 +46,28 @@ def mat_mult2(a, b):
                 c[c_row_ii, c_col_ii] += a[c_row_ii, ii] * b[ii, c_col_ii]
 
     return c
+
+
+def mat_sq_col1(ff,gg):
+    """
+    This function takes as input two matrices of different shapes,
+    and computes their product.
+
+    INPUT:
+    ------
+    ff : Numpy array of first matrix
+    gg : Numpy array of second matrix
+
+    RETURNS:
+    --------
+    The product of the two numpy arrays
+    """
+
+    hh = np.zeros((min(np.shape(ff)),min(np.shape(gg))))
+    pp = len(hh)
+    for ii in range(0, pp):
+        for jj in range(0, pp):
+            gg == gg.T
+            hh[ii, jj] = np.sum(ff[ii]*gg[:,jj])
+    return hh
 
