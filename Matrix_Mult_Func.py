@@ -43,7 +43,7 @@ def mat_mult(aa, bb):
     -------
     A numpy array
     """
-dim_aa = rows_and_cols(aa)
+    dim_aa = rows_and_cols(aa)
     dim_bb = rows_and_cols(bb)
     assert dim_aa[1] == dim_bb[0], print("Matrices cannot be multiplied")
     
