@@ -3,9 +3,25 @@ import Matrix_Mult_Func as mmf
 
 class Rotation:
     """
-    Write discussion for this class and def functions 
+    This class will bundle both data and functionality together to run
+    different functions for computing matrix rotations.
     """
     def __init__(self, angle, axis="z"):
+        """
+        This function takes as input an angle and axis and runs an if-else
+        statement that will output a trigonometric identity matrix. If the
+        axis is not given in using the proper input format, an assertion
+        error will follow.
+        
+        INPUT:
+        ------
+        angle : any angle theta in radians
+        axis  : any axis from the 3D plane
+        
+        RETURNS:
+        -------
+        The trigonometric identity matrix.
+        """
         assert (axis=="x" or axis=="y" or axis=="z"), "Axis error"
         if axis == "x":
             self.R = np.array([[1, 0, 0],
@@ -19,4 +35,16 @@ class Rotation:
                           [-np.sin(angle), np.cos(angle), 0], [0, 0, 1]])
 
     def rotate(self, vec):
+        """
+        This function takes as input a vector and runs a function that 
+        will output a calculation for the rotation of a matrix.
+        
+        INPUT:
+        ------
+        angle : any vector in the 3D plane
+        
+        RETURNS:
+        -------
+        The rotation of a matrix.
+        """
         return mmf.mat_mult(self.R, vec)

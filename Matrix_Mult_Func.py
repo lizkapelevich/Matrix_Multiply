@@ -2,7 +2,7 @@ import numpy as np
 
 def rows_and_cols(x):
     """
-    This function takes as input one matrix and runs  an if-else
+    This function takes as input one matrix and runs an if-else
     statement that computes the length of the necessary matrix for the
     following definition function. If the matrix is a 2x1, it will print 
     in the proper format. Otherwise, the function will print out the proper
