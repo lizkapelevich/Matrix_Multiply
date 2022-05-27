@@ -8,10 +8,7 @@ class Rotation:
     """
     def __init__(self, angle, axis="z"):
         """
-        This function takes as input an angle and axis and runs an if-else
-        statement that will output a trigonometric identity matrix. If the
-        axis is not given in using the proper input format, an assertion
-        error will follow.
+        Write about what this code does rather than how it works.
         
         INPUT:
         ------
@@ -25,14 +22,14 @@ class Rotation:
         assert (axis=="x" or axis=="y" or axis=="z"), "Axis error"
         if axis == "x":
             self.R = np.array([[1, 0, 0],
-                          [0, np.cos(angle), np.sin(angle)],
-                          [0, -np.sin(angle), np.cos(angle)]])
+                     [0, np.cos(angle), np.sin(angle)],
+                     [0, -np.sin(angle), np.cos(angle)]])
         if axis == "y":
             self.R = np.array([[np.cos(angle), 0, np.sin(angle)],
-                          [0, 1, 0], [-np.sin(angle), 0, np.cos(angle)]])
+                     [0, 1, 0], [-np.sin(angle), 0, np.cos(angle)]])
         if axis == "z":
             self.R = np.array([[np.cos(angle), np.sin(angle), 0],
-                          [-np.sin(angle), np.cos(angle), 0], [0, 0, 1]])
+                     [-np.sin(angle), np.cos(angle), 0], [0, 0, 1]])
 
     def rotate(self, vec):
         """
